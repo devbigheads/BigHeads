@@ -25,17 +25,114 @@
     <!-- Bootstrap CSS / Color Scheme -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+         #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color:	#FFC680;
+            width: 100%;
+            height: 770%;
+            position: fixed;
+        }
+        /* Add styles for the heading */
+        h1 {
+    text-align: center;
+    color: #0c0a0a;
+    margin-top: 20px;
+    font-weight: 300;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+}
+
+/* Apply animation to the entire heading */
+h1 {
+    animation: bounce 2s infinite alternate;
+}
+
+/* Define the animation for the entire heading */
+@keyframes bounce {
+    4%, 100% {
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Define individual animations for each letter */
+
+
+/* Add more span:nth-child rules for each letter as needed */
+
+/* Define the animation for each letter */
+@keyframes letterBounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+.lead {
+            text-align: center;
+            font-size: 1.5em;
+            color: black; /* Set the text color */
+            animation: textAnimation 2s infinite alternate; /* Apply the animation */
+        }
+
+        /* Define the text animation */
+        @keyframes textAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+        .float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .floatn {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .my-float {
+            font-size: 24px;
+            color: #25D366; /* WhatsApp green color */
+        }
+        .calling{
+            color:black;
+            margin-top: 50px;
+        }
+    </style>
    
 </head>
 
-<body>
-    <a href="https://api.whatsapp.com/send?phone=+916238575185&text=Hello !!" class="float" target="_blank">
+<body >
+   <a href="tel:+91 6238575185" class="floatn">
+            <i class="fa fa-phone my-float"></i>
+        </a>   
+    
+ <a href="https://api.whatsapp.com/send?phone=+916238575185&text=Hello !!" class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
         </a>
-
+      
+       
     <!--Header Section-->
-    <section class="bg-gradient pt-5 pb-6">
-        <div class="container">
+    <section class="pt-5 pb-6">
+      
+   <canvas id="canvas"></canvas>
+
+        <div class="container" >
+         
             <div class="row">
                 <div class="col-12 d-flex flex-row align-items-center justify-content-between">
                     <div class="heading-brand col-md-4"><img src="images/logo.png"  style="width:40px" alt="logo.png"> &nbsp;
@@ -43,19 +140,22 @@
                     </div>
                     <div class="col-md-8">
                         
-                        <a href="Privacy Policy.pdf" style="float: right;" class="btn btn-dark"
+                        <a href="Privacy Policy.pdf" style="float: right; animation: borderAnimation 4s infinite; border-width: 3px;" class="btn btn-dark"
                             target="_blank">Privacy Policy</a>
                     </div>
                 </div>
             </div>
-            <div class="row mt-6">
-                <div class="col-md-8 mx-auto text-center">
-                    <h1>Big Heads Creative Tech </h1>
-                    <p class="lead mb-5">"Unleash <span style="color:red">BIG</span> Creativity"</p>
+            <div class="row mt-6" >
+                <div class="col-md-8 mx-auto text-center" >
+                    
+                        <h1>Big Heads Creative Tech </h1> 
+                        <p class="lead mb-5">"Unleash <span style="color:red">BIG</span> Creativity"</p> 
+                    
+                    
                     <a href="#address" class="btn btn-dark svg-icon" style=" /* Add the border style for the animation */
                     border: 1px solid;
                     /* Set the animation properties */
-                    animation: borderAnimation 4s infinite;">
+                    animation: borderAnimation 4s infinite; border-width: 3px;">
                         <!-- <em class="mr-2" data-feather="github"></em> -->
                         Get In Touch
                     </a>
@@ -112,7 +212,7 @@ help you stay one step ahead in today's dynamic digital landscape;
                                 </div>
                                 <div class="media-body">
                                     <h4>Our Highly Skilled and Dedicated Team</h4>
-                                    <p style="font-size: small;">
+                                    <p>
                                         We have assembled a talented and dedicated team of professionals who are
                                         passionate about software development. With expertise in various domains, our
                                         team brings a wealth of experience in programming, quality assurance, project
@@ -133,7 +233,7 @@ help you stay one step ahead in today's dynamic digital landscape;
                                 </div>
                                 <div class="media-body">
                                     <h4>Continuous Learning and Adaptability</h4>
-                                    <p style="font-size: small;">
+                                    <p>
                                         In an industry that is constantly evolving, we understand the importance of
                                         continuous learning. Our team is committed to staying at the forefront of
                                         technological advancements, regularly upgrading their skills, and embracing
@@ -155,7 +255,7 @@ help you stay one step ahead in today's dynamic digital landscape;
                                 </div>
                                 <div class="media-body">
                                     <h4>Strong Client Relationships and Customer Focus</h4>
-                                    <p style="font-size: small;">
+                                    <p>
                                         At BIG HEADS, we prioritize building strong and lasting relationships with our
                                         clients. We believe in truly understanding their unique needs, goals, and
                                         challenges. By actively listening and collaborating closely with our clients
@@ -394,25 +494,25 @@ help you stay one step ahead in today's dynamic digital landscape;
                         to innovation and exceptional quality, to our customer-centric approach that ensures we
                         consistently exceed expectations.</p>
 
-                    <h4 class="mt-5">COLLABORATION AND COMMUNICATION</h4>
+                    <h2 class="mt-5">COLLABORATION AND COMMUNICATION</h2>
                     <p class="lead text-muted">Our team thrives on effective collaboration and open communication. We understand the importance
                         of seamless teamwork and utilize the
                         latest collaboration tools and platforms to foster a collaborative environment</p>
 
-                    <h4 class="mt-5">EXPERTISE AND SPECIALIZATION:</h4>
+                    <h2 class="mt-5">EXPERTISE AND SPECIALIZATION:</h2>
                     <p class="lead text-muted">Our team is composed of highly skilled professionals who bring expertise and specialization to
                         the table. With diverse
                         backgrounds and deep knowledge in various technologies and domains, we are equipped to tackle
                         complex challenges and deliver
                         top-notch software solutions.</p>
 
-                    <h4 class="mt-5">PROBLEM-SOLVING AND CREATIVITY</h4>
+                    <h2 class="mt-5">PROBLEM-SOLVING AND CREATIVITY</h2>
                     <p class="lead text-muted">Our team thrives on problem-solving and embraces challenges with a creative mindset. We believe
                         that every problem has a
                         solution, and we are dedicated to finding the most efficient and effective ways to overcome
                         obstacles.</p>
 
-                    <h4 class="mt-5">ADAPTABILITY AND CONTINUOUS LEARNING</h4>
+                    <h2 class="mt-5">ADAPTABILITY AND CONTINUOUS LEARNING</h2>
                     <p class="lead text-muted">In the ever-evolving world of technology, adaptability is crucial. Our team embraces change
                         and continuously learns to stay at the forefront of emerging trends and advancements</p>
                 </div>
@@ -450,10 +550,10 @@ help you stay one step ahead in today's dynamic digital landscape;
                 <div class="col-12 text-center">
                     <ul class="list-inline">
                         <li class="list-inline-item">
-                            <a href="Privacy Policy.pdf" style="color: blue;">Privacy Policy</a>
+                            <a href="Privacy Policy.pdf" style="color: black;">Privacy Policy</a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="terms.pdf" style="color: blue;">Terms and conditions</a>
+                            <a href="terms.pdf" style="color: black;">Terms and conditions</a>
                         </li>
 
                         <br>
@@ -480,6 +580,7 @@ help you stay one step ahead in today's dynamic digital landscape;
                 /* Set the animation properties */
                 animation: borderAnimation 4s infinite;">
                     &copy; 2023 Big Heads - Created By BigHeads Creative Tech
+                   
                 </div>
             </div>
         </div>
@@ -492,6 +593,181 @@ help you stay one step ahead in today's dynamic digital landscape;
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+        // Your JavaScript code here
+        var c = document.getElementById ("canvas");
+        var ctx = c.getContext("2d");
+        function resize() {
+        var box = c.getBoundingClientRect();
+        c.width = box.width;
+        c.height = box.height;
+    }
+    
+    var light = {
+        x: 160,
+        y: 200     
+        
+    }
+    var colors =["#f5c156", "#e6616b", "#5cd3ad"];
+    
+    function drawLight() {
+        ctx.beginPath();
+        ctx.arc(light.x, light.y, 1000, 0, 2 * Math.PI);
+        var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
+        gradient.addColorStop(0, "#FEFEFA");
+    gradient.addColorStop(1, "#FAEBD7");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+        ctx.fill();
+    
+        ctx.beginPath();
+        ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
+        gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
+        gradient.addColorStop(0, "#fff");
+    gradient.addColorStop(1, "#3b4654");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+    }
+    
+    function Box() {
+        this.half_size = Math.floor((Math.random() * 50) + 1);
+        this.x = Math.floor((Math.random() * c.width) + 1);
+        this.y = Math.floor((Math.random() * c.height) + 1);
+        this.r = Math.random() * Math.PI;
+        this.shadow_length = 2000;
+        this.color = colors[Math.floor((Math.random() * colors.length))];
+      
+        this.getDots = function() {
+    
+            var full = (Math.PI * 2) / 4;
+    
+    
+            var p1 = {
+                x: this.x + this.half_size * Math.sin(this.r),
+                y: this.y + this.half_size * Math.cos(this.r)
+            };
+            var p2 = {
+                x: this.x + this.half_size * Math.sin(this.r + full),
+                y: this.y + this.half_size * Math.cos(this.r + full)
+            };
+            var p3 = {
+                x: this.x + this.half_size * Math.sin(this.r + full * 2),
+                y: this.y + this.half_size * Math.cos(this.r + full * 2)
+            };
+            var p4 = {
+                x: this.x + this.half_size * Math.sin(this.r + full * 3),
+                y: this.y + this.half_size * Math.cos(this.r + full * 3)
+            };
+    
+            return {
+                p1: p1,
+                p2: p2,
+                p3: p3,
+                p4: p4
+            };
+        }
+        this.rotate = function() {
+            var speed = (80 - this.half_size) / 20;
+            this.r += speed * 0.002;
+            this.x += speed;
+            this.y += speed;
+        }
+        this.draw = function() {
+            var dots = this.getDots();
+            ctx.beginPath();
+            ctx.moveTo(dots.p1.x, dots.p1.y);
+            ctx.lineTo(dots.p2.x, dots.p2.y);
+            ctx.lineTo(dots.p3.x, dots.p3.y);
+            ctx.lineTo(dots.p4.x, dots.p4.y);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+    
+    
+            if (this.y - this.half_size > c.height) {
+                this.y -= c.height + 100;
+            }
+            if (this.x - this.half_size > c.width) {
+                this.x -= c.width + 100;
+            }
+        }
+        this.drawShadow = function() {
+            var dots = this.getDots();
+            var angles = [];
+            var points = [];
+    
+            for (dot in dots) {
+                var angle = Math.atan2(light.y - dots[dot].y, light.x - dots[dot].x);
+                var endX = dots[dot].x + this.shadow_length * Math.sin(-angle - Math.PI / 2);
+                var endY = dots[dot].y + this.shadow_length * Math.cos(-angle - Math.PI / 2);
+                angles.push(angle);
+                points.push({
+                    endX: endX,
+                    endY: endY,
+                    startX: dots[dot].x,
+                    startY: dots[dot].y
+                });
+            };
+    
+            for (var i = points.length - 1; i >= 0; i--) {
+                var n = i == 3 ? 0 : i + 1;
+                ctx.beginPath();
+                ctx.moveTo(points[i].startX, points[i].startY);
+                ctx.lineTo(points[n].startX, points[n].startY);
+                ctx.lineTo(points[n].endX, points[n].endY);
+                ctx.lineTo(points[i].endX, points[i].endY);
+                ctx.fillStyle = "#FAE7B5";
+                ctx.fill();
+            };
+        }
+    }
+    
+    var boxes = [];
+    
+    function draw() {
+        ctx.clearRect(0, 0, c.width, c.height);
+        drawLight();
+    
+        for (var i = 0; i < boxes.length; i++) {
+            boxes[i].rotate();
+            boxes[i].drawShadow();
+        };
+        for (var i = 0; i < boxes.length; i++) {
+            collisionDetection(i)
+            boxes[i].draw();
+        };
+        requestAnimationFrame(draw);
+    }
+    
+    resize();
+    draw();
+    
+    while (boxes.length < 14) {
+        boxes.push(new Box());
+    }
+    
+    window.onresize = resize;
+    c.onmousemove = function(e) {
+        light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
+        light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+    }
+    
+    
+    function collisionDetection(b){
+        for (var i = boxes.length - 1; i >= 0; i--) {
+            if(i != b){	
+                var dx = (boxes[b].x + boxes[b].half_size) - (boxes[i].x + boxes[i].half_size);
+                var dy = (boxes[b].y + boxes[b].half_size) - (boxes[i].y + boxes[i].half_size);
+                var d = Math.sqrt(dx * dx + dy * dy);
+                if (d < boxes[b].half_size + boxes[i].half_size) {
+                    boxes[b].half_size = boxes[b].half_size > 1 ? boxes[b].half_size-=1 : 1;
+                    boxes[i].half_size = boxes[i].half_size > 1 ? boxes[i].half_size-=1 : 1;
+                }
+            }
+        }
+    }
+    
+        // Rest of your JavaScript code...
+    </script>
 </body>
 
 </html>
